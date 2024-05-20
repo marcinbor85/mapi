@@ -1,9 +1,17 @@
 
 # MAPI
 MAPI is an abbreviation of Magic Application Protocol Interface. It's a macro-based wrapper for C API.
-With this library You can easily wrap and unify any raw-C API and call it with unified dispatcher.
+With this library You can easily wrap and unify any raw C API and call it with unified dispatcher.
 All functions calls are passed through internal MAPI dispatcher.
 Each function has its own "api" namespace with its own list of identifiers.
+Library uses variadic arguments internally.
+
+## Features
+- can wrap any C api with dispatcher pattern
+- supports up-to 3 function arguments (can be easily extended)
+- all library features are covered by unit tests
+- allow to call public functions by name string
+- c-like namespaces
 
 ## Usage
 
