@@ -36,6 +36,16 @@ SOFTWARE.
 #include <stdarg.h>
 #include <stddef.h>
 
+#ifdef MAPI_USE_CONFIG
+#include "mapi_config.h"
+#endif
+
+#ifdef MAPI_CONFIG_LOG
+#define MAPI_LOG(...) MAPI_CONFIG_LOG(__VA_ARGS__)
+#else
+#define MAPI_LOG(...)
+#endif
+
 #define MAPI_XSTR(x) #x
 #define MAPI_STR(x) MAPI_XSTR(x)
 

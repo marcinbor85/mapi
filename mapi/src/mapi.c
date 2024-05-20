@@ -34,7 +34,7 @@ static const struct mapi_func_desc* find_func_by_name(struct mapi_dispatcher *se
 
 static mapi_status_t call_func(struct mapi_dispatcher *self, const struct mapi_func_desc *func, void *user_data, void* ret, va_list argp)
 {
-    printf("call <%s> function <%s> id <%d>\n", self->name, func->name, func->id);
+    MAPI_LOG("call <%s> function <%s> id <%d>\n", self->name, func->name, func->id);
     mapi_status_t status = MAPI_STATUS_ERROR_FUNC_NO_CALLBACK;
     if (func->callback != NULL) {
         status = func->callback(self, func, user_data, ret, argp);
