@@ -28,11 +28,23 @@ SOFTWARE.
 
 #define MAPI_NAME api_calc
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define MAPI_FUNCTIONS_LIST\
     _FUNC_RET_P2(calc_sum, int, int, int)\
     _FUNC_NORET_P1(calc_neg, int*)\
     _FUNC_NORET_P0(calc_print_pi)\
 
-// TODO: add optional explicit declarations here
+// write optional explicit declarations here if source code docs needed
+
+int calc_sum(int a, int b);
+void calc_neg(int *val);
+void calc_print_pi(void);
 
 #include "mapi_api_header.h"
+
+#ifdef __cplusplus
+}
+#endif

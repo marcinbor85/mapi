@@ -30,10 +30,6 @@ SOFTWARE.
 #error MAPI_FUNCTIONS_LIST not defined
 #endif /* MAPI_FUNCTIONS_LIST */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define _FUNC_RET_P0(func_name, ret_type) MAPI_FUNC_ID(MAPI_NAME, func_name),
 #define _FUNC_RET_P1(func_name, ret_type, arg1_type) MAPI_FUNC_ID(MAPI_NAME, func_name),
 #define _FUNC_RET_P2(func_name, ret_type, arg1_type, arg2_type) MAPI_FUNC_ID(MAPI_NAME, func_name),
@@ -101,7 +97,3 @@ MAPI_FUNCTIONS_LIST
 #undef _FUNC_NORET_P3
 
 extern MAPI_DECL_DISPATCHER(MAPI_NAME);
-
-#ifdef __cplusplus
-}
-#endif

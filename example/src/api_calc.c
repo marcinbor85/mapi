@@ -25,3 +25,5 @@ SOFTWARE.
 #include "api_calc.h"
 
 #include "mapi_api_source.h"
+
+// no need to define anything here, wrappers will be generated automatically

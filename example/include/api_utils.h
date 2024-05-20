@@ -28,9 +28,19 @@ SOFTWARE.
 
 #define MAPI_NAME api_utils
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define MAPI_FUNCTIONS_LIST\
     _FUNC_NORET_P1(utils_reverse, char*)\
 
-// TODO: add optional explicit declarations here
+// write optional explicit declarations here if source code docs needed
+
+void utils_reverse(char *str);
 
 #include "mapi_api_header.h"
+
+#ifdef __cplusplus
+}
+#endif
