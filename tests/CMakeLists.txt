@@ -1,15 +1,16 @@
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/googletest)
+add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/googletest googletest)
 
 function(create_test TARGET)
     add_executable(${TARGET})
 
     target_sources(${TARGET} PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+        ${PROJECT_SOURCE_DIR}/tests/main.cpp
         ${ARGN}
     )
 
     target_include_directories(${TARGET} PRIVATE
         ${GTEST_INCLUDE_DIRS}
+        ${PROJECT_SOURCE_DIR}/tests/mocks
     )
 
     target_link_libraries(${TARGET}
